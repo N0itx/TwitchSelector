@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0e0e10;
+  color: #eee;
+}
+
+header {
+  overflow: hidden;
+  padding-top: 10px;
+  background-color: #18181b;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2b33;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8500ff;
+}
+
+/*===== MAIN =====*/
+
+.container {
+  min-height: 80%; /* Altura mínima del contenedor igual al 100% de la ventana */
+  display: grid;
+  grid-template-columns: 75% 25%;/* 75% para la primera columna y 25% para la segunda */
+  grid-template-rows: 75% 25%;/* 75% para la primera fila y 25% para la segunda */
+  gap: 15px 15px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "APP CHAT"
+    "CONSOLA CHAT";
+  margin: 3%;
+}
+
+.APP {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 90%;/* Ajustar las filas según tus necesidades */
+  gap: 5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "app-title"
+    "app-content";
+  grid-area: APP;
+}
+
+.app-title {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."; 
+  grid-area: app-title;
+  align-items: center;
+  padding: 10px;
+  background-color: #18181b;
+}
+
+.app-content {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". app-opciones";
+  grid-area: app-content;
+  padding: 10px;
+  background-color: #18181b;
+}
+
+.app-opciones {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 0.5fr 1.1fr 1.1fr 1.1fr 1.1fr 1.1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "."
+    "."
+    "."
+    "."
+    "."
+    "."; 
+  grid-area: app-opciones; 
+}
+
+.CONSOLA {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;/* Ajustar las filas según tus necesidades */
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: 
+    "consola-title"
+    "consola-content"; 
+  grid-area: CONSOLA;
+
+  background-color: #18181b;
+  padding: 10px;
+}
+
+.consola-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+  grid-area: consola-title;
+  align-items: start;
+}
+
+.consola-content {
+  overflow: auto;
+  grid-area: consola-content;
+  position: relative;
+}
+
+.CHAT {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100%;/* Ocupa todo el espacio disponible */
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ".";
+  grid-area: CHAT;
+  align-items: center;
+  justify-items: center;
+}
+
+
+/*===== CONSOLA =====*/
+
+.consola-title div:nth-child(2) {
+  text-align: right;
+  font-size: smaller;
+}
+
+.consola-content div { position: absolute; }
+
+.consola-content div p {
+  margin: 5px;
+  /* box-shadow: 0px 1px 0px 0px #322b39; */
+  width: 99%;
+  overflow-wrap: break-word;
+}
+
+/*===== APP =====*/
+
+.app-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 0 10px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.app-profile img {
+  width: 35px;
+  border-radius: 20px;
+}
+
+.app-title h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.app-title div:nth-child(3) {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.app-title div:nth-child(3) i {
+  font-size: 15px;
+}
+
+/*===== FONDO =====*/
+
+/* body {
+  background-image: url('fondo.png');
+  background-repeat: repeat;
+  background-position: 0 0;
+  animation: moverFondo 30s linear infinite;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes moverFondo {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100% 100%;
+  }
+} */
+
+
+/*===== ICONOS =====*/
+[class*=fa-]:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 10px;
+}
+
+[class*=-right]:before {
+  margin-left: 10px;
+}
+
+[class*=none]:before {
+  margin-right: 0px;
+}
