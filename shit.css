@@ -3,6 +3,19 @@
   font-family: monospace;
 }
 
+@font-face {
+  font-family: "monday";
+  src: url("src/Monday\ Donuts.ttf");
+}
+@font-face {
+  font-family: "wonderland";
+  src: url("src/Wonderland.otf");
+}
+@font-face {
+  font-family: "heavitas";
+  src: url("src/Heavitas.ttf");
+}
+
 html,
 body {
   height: 100%;
@@ -13,8 +26,10 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #0e0e10;
-  color: #eee;
+  color: #aeaeae;
+  background-image: radial-gradient(90% 90% at 15% 10%, #282831, #0e0e10);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 header {
@@ -42,194 +57,101 @@ header {
   background: #8500ff;
 }
 
-/*===== MAIN =====*/
 
-.container {
-  min-height: 80%; /* Altura mínima del contenedor igual al 100% de la ventana */
-  display: grid;
-  grid-template-columns: 75% 25%;/* 75% para la primera columna y 25% para la segunda */
-  grid-template-rows: 75% 25%;/* 75% para la primera fila y 25% para la segunda */
-  gap: 15px 15px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "APP CHAT"
-    "CONSOLA CHAT";
-  margin: 3%;
-}
+/*===== NAV =====*/
 
-.APP {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10% 90%;/* Ajustar las filas según tus necesidades */
-  gap: 5px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "app-title"
-    "app-content";
-  grid-area: APP;
-}
-
-.app-title {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". . ."; 
-  grid-area: app-title;
-  align-items: center;
-  padding: 10px;
-  background-color: #18181b;
-}
-
-.app-content {
-  display: grid;
-  grid-template-columns: 1.5fr 0.5fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". app-opciones";
-  grid-area: app-content;
-  padding: 10px;
-  background-color: #18181b;
-}
-
-.app-opciones {
-  display: grid; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: 0.5fr 1.1fr 1.1fr 1.1fr 1.1fr 1.1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "."
-    "."
-    "."
-    "."
-    "."
-    "."; 
-  grid-area: app-opciones; 
-}
-
-.CONSOLA {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 20% 80%;/* Ajustar las filas según tus necesidades */
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: 
-    "consola-title"
-    "consola-content"; 
-  grid-area: CONSOLA;
-
-  background-color: #18181b;
-  padding: 10px;
-}
-
-.consola-title {
+nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: ". .";
-  grid-area: consola-title;
-  align-items: start;
+  justify-content: space-around;
+  margin: 30px;
 }
 
-.consola-content {
-  overflow: auto;
-  grid-area: consola-content;
-  position: relative;
+nav .home {
+  text-align: left;
+  margin-right: auto;
+  padding: 0 30px;
+  text-decoration: none;
 }
 
-.CHAT {
+nav .home div {
+  font-family: heavitas;
+  color: #aeaeae;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav .contacto {
+  text-align: right;
+  margin-left: auto;
+  padding: 0 30px;
+  font-family: heavitas;
+  color: #aeaeae;
+  text-decoration: none;
+}
+
+/*===== CONTAINER - INICIO =====*/
+
+.container-inicio {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100%;/* Ocupa todo el espacio disponible */
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ".";
-  grid-area: CHAT;
-  align-items: center;
   justify-items: center;
-}
-
-
-/*===== CONSOLA =====*/
-
-.consola-title div:nth-child(2) {
-  text-align: right;
-  font-size: smaller;
-}
-
-.consola-content div { position: absolute; }
-
-.consola-content div p {
-  margin: 5px;
-  /* box-shadow: 0px 1px 0px 0px #322b39; */
-  width: 99%;
-  overflow-wrap: break-word;
-}
-
-/*===== APP =====*/
-
-.app-profile {
-  display: flex;
-  flex-direction: row;
-  gap: 0 10px;
-  flex-wrap: nowrap;
   align-items: center;
 }
 
-.app-profile img {
-  width: 35px;
-  border-radius: 20px;
-}
-
-.app-title h1 {
-  text-align: center;
+.titulo h1, h2{
+  font-family: heavitas;
   margin: 0;
+  text-shadow: 0px 0px 30px #00000075;
+  color: #eee;
 }
 
-.app-title div:nth-child(3) {
-  text-align: right;
-  padding-right: 20px;
+.titulo h1 {
+  font-size: 5em;
 }
 
-.app-title div:nth-child(3) i {
-  font-size: 15px;
+.titulo h2 {
+  margin: -15px 0;
 }
 
-/*===== CHAT =====*/
-
-.CHAT iframe {
-  width: 100%;
-  height: 100%;
+input#broadcaster {
+  width: 16em;
+  margin: 3em 0 2em;
+  background-color: #36363e;
+  border-style: none;
+  color: #eee;
+  padding: 1em;
+  text-decoration: none;
+  outline: none;
+  font-size: 2em;
+  box-shadow: 0 0 20px 0px #00000030;
 }
 
-/*===== FONDO =====*/
-
-/* body {
-  background-image: url('fondo.png');
-  background-repeat: repeat;
-  background-position: 0 0;
-  animation: moverFondo 30s linear infinite;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-@keyframes moverFondo {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: -100% 100%;
-  }
+/* input#broadcaster::placeholder {
+  color: #8500ff;
 } */
 
+.info {
+  margin: 1em 35em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.icons i {
+  color: #eee;
+  font-size: 2em;
+  margin: 2em 0 15px 0;
+}
+
+i.extra {
+  color: #63676b;
+}
+
+/*=====  =====*/
+
+hr {
+  padding: 0 30em;
+  border-color: #878787;
+}
 
 /*===== ICONOS =====*/
 [class*=fa-]:before {
