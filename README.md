@@ -1,2 +1,2 @@
 # TwitchSelector
-Selector de usuarios en canales específicos de twitch, es principalmente para dinámicas donde se ocupe seleccionar cierta cantidad de gente.
+Su propósito es elegir al azar un grupo de personas que estén participando activamente en el chat de Twitch. Puedes personalizar esta selección según tus preferencias, como si son suscriptores o no, entre otras opciones.
