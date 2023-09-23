@@ -1,51 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <title>Dinamicas con Nacos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="shit.css">
-  <script type="text/javascript" src="tmi.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="new.css">
+  <script type="text/javascript" src="src/tmi.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="icon" type="image/png"
     href="https://raw.githubusercontent.com/N0itx/Adivina-el-Rango/main/sources/favicon-16x16.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="bot.js"></script> -->
+    <title>Selector de nacos</title>
 </head>
-
 <body>
-  <main class="container">
-    <div class="APP">
-      <div class="app-title">
-        <div class="app-profile"><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png" alt=""><div>N0itx</div></div>
-        <h1>SELECCIONADOR DE NACOS YIYI</h1>
-        <div><i class="fa fa-user-plus"></i><b>10</b> participantes</div>
+    <nav>
+      <a class="home" href="#">
+        <div>TW</div>
+        <div>SL</div>
+      </a>
+      <a class="contacto" href="#">CONTACTO</a>
+    </nav>
+    <div class="container-inicio">
+      <div class="titulo">
+        <h2>TWITCH</h2>
+        <h1>SELECTOR</h1>
       </div>
-      <div class="app-content">
-        <div>CONTNDIO DE LA APP</div>
-        <div class="app-opciones">
-          <h4>OPCIONES</h4>
-          <button>BOTON1</button>
-          <button>BOTON2</button>
-          <button>BOTON3</button>
-          <button>BOTON4</button>
-          <button>BOTON5</button>
-        </div>
+      <hr>
+      <input id="broadcaster" type="text" placeholder="">
+      <p class="info">Su propósito es elegir al azar un grupo de personas que estén participando activamente en el chat de Twitch. Puedes personalizar esta selección según tus preferencias, como si son suscriptores o no, entre otras opciones.</p>
+      <div class="icons">
+        <i class="fa fa-twitch"></i>
+        <i class="fa fa-html5"></i>
+        <i class="fa fa-css3"></i>
+        <i class="fas fa-brands fa-square-js fa-shake"></i>
       </div>
+      <i class="extra">con tecnologia de tmi.js y twitch API [helix]</i>
     </div>
-    <div class="CONSOLA">
-      <div class="consola-title">
-        <div><i class="fa fa-terminal"></i><i>consola</i></div>
-        <div>• <i>desconectado</i> •</div>
-      </div>
-      <div class="consola-content">
-        <div style="position: absolute;"></div>
-      </div>
-    </div>
-    <div class="CHAT">
-      <iframe id="chat_embed" src="https://www.twitch.tv/embed/soypan/chat?parent=n0itx.github.io"></iframe>
-    </div>
-  </main>
+    <script type="text/javascript" src="src/input.js"></script>
+    <!-- <script type="text/javascript" src="bot.js"></script> -->
 </body>
-
 </html>
