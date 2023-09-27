@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="new.css">
+  <script type="text/javascript" src="src/tmi.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" type="image/png"
+    href="https://raw.githubusercontent.com/N0itx/Adivina-el-Rango/main/sources/favicon-16x16.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Selector de nacos</title>
+</head>
+
+<body>
+  <nav>
+    <a class="home" href="#">
+      <div>TW</div>
+      <div>SLT</div>
+    </a>
+    <div><b>TWITCH</b>SELECTOR</div>
+    <a class="contacto" href="#">CONTACTO</a>
+  </nav>
+  <div class="head-app">
+    <div class="head-user">
+      <img
+        src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png"
+        alt="">
+      <div class="head-user-info">
+        <div class="head-info-nick">username</div>
+        <div class="head-info-palabra">infoextra</div>
+      </div>
+    </div>
+    <input id="head-comando" type="text" placeholder="!comando">
+    <div class="head-opciones">
+      <div class="checkbox-wrapper">
+        <input id="cb1" type="checkbox" class="tgl" />
+        <label class="tgl-btn" data-tg-off="no suscriptores" data-tg-on="suscriptores" for="cb1"></label>
+      </div>
+      <div class="checkbox-wrapper">
+        <input id="cb2" type="checkbox" class="tgl" />
+        <label class="tgl-btn" data-tg-off="no seguidores" data-tg-on="seguidores" for="cb2"></label>
+      </div>
+      <div class="checkbox-wrapper">
+        <input id="cb3" type="checkbox" class="tgl" />
+        <label class="tgl-btn" data-tg-off="no moderadores" data-tg-on="moderadores" for="cb3"></label>
+      </div>
+      <div style="font-variant-numeric: ordinal;">ventaja subs</div>
+      <div style="font-variant-numeric: ordinal;">ventaja seguidores</div>
+      <div style="font-variant-numeric: ordinal;">tiempo de seguimiento</div>
+    </div>
+    <div class="select-container">
+      <span class="select-choose">Selecciona participantes</span>
+      <div class="dropdown">
+        <div class="select">
+          <span>cantidad de participantes</span>
+          <i class="fa fa-chevron-left"></i>
+        </div>
+        <input type="hidden" name="gender">
+        <ul class="dropdown-menu">
+          <li>1 participante</li>
+          <li>2 participantes</li>
+          <li>3 participantes</li>
+          <li>5 participantes</li>
+          <li>9 participantes</li>
+          <li>10 participantes</li>
+          <li>15 participantes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="head-parti">102 participantes</div>
+  </div>
+  <hr style="width:95%;">
+  <div class="container-app">
+    <div class="app-izq">
+      <div class="app-opciones">OPCIONES DEL APP</div>
+      <div class="app-cards">
+        <!-- ===== -->
+        <div class="app-user-card">
+          <div class="card-suscriptor"></div>
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/ac27d9ec-e281-477d-b940-d634963da59b-profile_banner-480.png" alt="" class="card-img-background">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png" alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick">NICK NAME</div>
+            <div class="card-nametag">name#tag</div>
+          </div>
+        </div>
+
+        <div class="app-user-card">
+          <div class="card-suscriptor"></div>
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/d7219fca-8631-4ee6-9f42-1839a6993723-profile_banner-480.png" alt="" class="card-img-background">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/nightbot-profile_image-2345338c09b4d468-70x70.png" alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick">NICK NAME NICK</div>
+            <div class="card-nametag">name#tag</div>
+          </div>
+        </div>
+
+        <div class="app-user-card">
+          <div class="card-suscriptor"></div>
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/4ebd919e-dbdc-468e-a034-61387f8ab660-profile_banner-480.jpeg" alt="" class="card-img-background">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png" alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick">NICK NAME NICK MAMALON PA</div>
+            <div class="card-nametag">name#tag</div>
+          </div>
+        </div>
+        <!-- ====== -->
+      </div>
+      <div class="app-console">CONSOLA</div>
+    </div>
+    <div class="app-der">
+      <div class="app-userinfo">USERINFO</div>
+      <div class="app-chat">TWITCH CHAT</div>
+    </div>
+  </div>
+  <!-- <script type="text/javascript" src="bot.js"></script> -->
+  <script type="text/javascript" src="src/select.js"></script>
+
+</body>
+
+</html>
