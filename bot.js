@@ -1,30 +1,36 @@
 'use strict'
 
+let broadcaster = window.location.href.split('?')[1];
+console.log(broadcaster)
+// if (broadcaster.length){
+
+// }
+
 const client = new tmi.Client({
   connection: {
     reconnect: true,
     secure: true
   },
-  channels: ['soypan', 'elmariana']
+  channels: ['soypan', 'elspreen']
 });
 
 client.connect().catch(console.error);
 
 client.on('connected', connection);
-client.on('message', chat_messages);
+// client.on('message', chat_messages);
 
 async function connection(addr, port) {
   console.log(`* Connected to ${addr}:${port}`)
   $('.consola-title div:eq(1)').html(`• ${addr}:${port} •`)
-  $('.consola-content div').append(`<p class="consola-msg">+ Conectado con twitch en: ${addr}:${port} *</p>`)
+  $('.console-container').append(`<div class="console-line cvr">+ Conectado con twitch en: ${addr}:${port} *</div>`)
 }
 
 function chat_messages(chs, usr, msg, self) {
-  // $('.consola-content div').prepend(`<p class="consola-msg">+ ${usr.username}: ${msg}</p>`)
+  $('.console-container').prepend(`<div class="console-line">+ ${usr.username}: ${msg}</div>`)
 }
 
 
-
+//<div class="console-line">${}</div>
 /*===== extra =====*/
 
 function removeExedent(clase, num) {

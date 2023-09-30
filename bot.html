@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="new.css">
+  <link rel="stylesheet" type="text/css" href="shit.css">
   <script type="text/javascript" src="src/tmi.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="icon" type="image/png"
@@ -51,10 +51,10 @@
       <div style="font-variant-numeric: ordinal;">tiempo de seguimiento</div>
     </div>
     <div class="select-container">
-      <span class="select-choose">Selecciona participantes</span>
+      <!-- <span class="select-choose">Selecciona participantes</span> -->
       <div class="dropdown">
         <div class="select">
-          <span>cantidad de participantes</span>
+          <span>Cantidad de participantes</span>
           <i class="fa fa-chevron-left"></i>
         </div>
         <input type="hidden" name="gender">
@@ -62,10 +62,12 @@
           <li>1 participante</li>
           <li>2 participantes</li>
           <li>3 participantes</li>
+          <li>4 participantes</li>
           <li>5 participantes</li>
+          <li>6 participantes</li>
+          <li>7 participantes</li>
+          <li>8 participantes</li>
           <li>9 participantes</li>
-          <li>10 participantes</li>
-          <li>15 participantes</li>
         </ul>
       </div>
     </div>
@@ -75,48 +77,175 @@
   <hr style="width:95%;">
   <div class="container-app">
     <div class="app-izq">
-      <div class="app-opciones">OPCIONES DEL APP</div>
+      <div class="app-opciones">
+        <button class="app-start">Comenzar</button>
+        <button class="app-stop">Detener</button>
+        <button class="app-clear">Limpiar</button>
+        <button class="app-select">Seleccionar</button>
+        <button class="app-restart">Reiniciar</button>
+      </div>
       <div class="app-cards">
         <!-- ===== -->
         <div class="app-user-card">
-          <div class="card-suscriptor"></div>
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/ac27d9ec-e281-477d-b940-d634963da59b-profile_banner-480.png" alt="" class="card-img-background">
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png" alt="" class="card-img">
+          <i class="card-suscriptor fa-star" title="suscriptor"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/ac27d9ec-e281-477d-b940-d634963da59b-profile_banner-480.png"
+            alt="" class="card-img-background">
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png"
+            alt="" class="card-img">
           <div class="card-user-info">
-            <div class="card-nick">NICK NAME</div>
-            <div class="card-nametag">name#tag</div>
+            <div class="card-nick" title="NICK NAME">NICK NAME</div>
+            <div class="card-nametag" title="Copiar nickname">name#tag</div>
           </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
         </div>
 
         <div class="app-user-card">
-          <div class="card-suscriptor"></div>
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/d7219fca-8631-4ee6-9f42-1839a6993723-profile_banner-480.png" alt="" class="card-img-background">
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/nightbot-profile_image-2345338c09b4d468-70x70.png" alt="" class="card-img">
+          <i class="card-suscriptor fa-heart" title="usuario"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/d7219fca-8631-4ee6-9f42-1839a6993723-profile_banner-480.png"
+            alt="" class="card-img-background">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/nightbot-profile_image-2345338c09b4d468-70x70.png"
+            alt="" class="card-img">
           <div class="card-user-info">
-            <div class="card-nick">NICK NAME NICK</div>
-            <div class="card-nametag">name#tag</div>
+            <div class="card-nick" title="valentin_guerrer0">valentin_guerrer0</div>
+            <div class="card-nametag" title="Copiar nickname">name#tag</div>
           </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
         </div>
 
         <div class="app-user-card">
-          <div class="card-suscriptor"></div>
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/4ebd919e-dbdc-468e-a034-61387f8ab660-profile_banner-480.jpeg" alt="" class="card-img-background">
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png" alt="" class="card-img">
+          <i class="card-suscriptor fa-user" title="suscriptor"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/4ebd919e-dbdc-468e-a034-61387f8ab660-profile_banner-480.jpeg"
+            alt="" class="card-img-background">
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png"
+            alt="" class="card-img">
           <div class="card-user-info">
-            <div class="card-nick">NICK NAME NICK MAMALON PA</div>
-            <div class="card-nametag">name#tag</div>
+            <div class="card-nick" title="NICK NAME NICK MAMALON PA">NICK NAME NICK MAMALON PA</div>
+            <div class="card-nametag" title="Copiar nickname">Valorant_Player1#5cm</div>
           </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
         </div>
+
+        <div class="app-user-card">
+          <i class="card-suscriptor fa-star" title="suscriptor"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/ac27d9ec-e281-477d-b940-d634963da59b-profile_banner-480.png"
+            alt="" class="card-img-background">
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png"
+            alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick" title="NICK NAME">NICK NAME</div>
+            <div class="card-nametag" title="Copiar nickname">name#tag</div>
+          </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
+        </div>
+
+        <div class="app-user-card">
+          <i class="card-suscriptor fa-heart" title="seguidor"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/d7219fca-8631-4ee6-9f42-1839a6993723-profile_banner-480.png"
+            alt="" class="card-img-background">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/nightbot-profile_image-2345338c09b4d468-70x70.png"
+            alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick" title="valentin_guerrer0">valentin_guerrer0</div>
+            <div class="card-nametag" title="Copiar nickname">name#tag</div>
+          </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
+        </div>
+
+        <div class="app-user-card">
+          <i class="card-suscriptor fa-user" title="usuario"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/4ebd919e-dbdc-468e-a034-61387f8ab660-profile_banner-480.jpeg"
+            alt="" class="card-img-background">
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png"
+            alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick" title="NICK NAME NICK MAMALON PA">NICK NAME NICK MAMALON PA</div>
+            <div class="card-nametag" title="Copiar nickname">Valorant_Player1#5cm</div>
+          </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
+        </div>
+
+        <div class="app-user-card">
+          <i class="card-suscriptor fa-star" title="suscriptor"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/ac27d9ec-e281-477d-b940-d634963da59b-profile_banner-480.png"
+            alt="" class="card-img-background">
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png"
+            alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick" title="NICK NAME">NICK NAME</div>
+            <div class="card-nametag" title="Copiar nickname">name#tag</div>
+          </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
+        </div>
+
+        <div class="app-user-card">
+          <i class="card-suscriptor fa-heart" title="seguidor"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/d7219fca-8631-4ee6-9f42-1839a6993723-profile_banner-480.png"
+            alt="" class="card-img-background">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/nightbot-profile_image-2345338c09b4d468-70x70.png"
+            alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick" title="valentin_guerrer0">valentin_guerrer0</div>
+            <div class="card-nametag" title="Copiar nickname">name#tag</div>
+          </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
+        </div>
+
+        <div class="app-user-card">
+          <i class="card-suscriptor fa-user" title="usuario"></i>
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/4ebd919e-dbdc-468e-a034-61387f8ab660-profile_banner-480.jpeg"
+            alt="" class="card-img-background">
+          <img
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/59f551b1-9c32-4cf7-8597-feba45e1efb7-profile_image-70x70.png"
+            alt="" class="card-img">
+          <div class="card-user-info">
+            <div class="card-nick" title="NICK NAME NICK MAMALON PA">NICK NAME NICK MAMALON PA</div>
+            <div class="card-nametag" title="Copiar nickname">Valorant_Player1#5cm</div>
+          </div>
+          <i class="card-reroll fa fa-retweet" title="Reroll user"></i>
+        </div>
+
         <!-- ====== -->
       </div>
-      <div class="app-console">CONSOLA</div>
+      <div class="app-console">
+        <div class="console-head">
+          <div><i class="fa-terminal"></i>Consola</div>
+        </div>
+        <div class="console-container"></div>
+      </div>
     </div>
     <div class="app-der">
-      <div class="app-userinfo">USERINFO</div>
-      <div class="app-chat">TWITCH CHAT</div>
+      <div class="app-userinfo">
+        <div class="userinfo-head">
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/nightbot-profile_image-2345338c09b4d468-70x70.png"
+            alt="" class="userinfo-profile">
+          <div class="userinfo-profile">
+            <div class="userinfo-nick">USERNAME</div>
+            <div class="userinfo-info">suscriptor 10 meses</div>
+          </div>
+        </div>
+        <div class="userinfo-msg"></div>
+        <div class="userinfo-opt"></div>
+      </div>
+      <div class="app-chat">
+        <iframe id="chat_embed" src="https://www.twitch.tv/embed/ldieguito/chat?darkpopout&parent=n0itx.github.com" height="100%"width="100%" style="border-style:none; outline:none;"></iframe>
+      </div>
     </div>
   </div>
-  <!-- <script type="text/javascript" src="bot.js"></script> -->
+  <script type="text/javascript" src="bot.js"></script>
   <script type="text/javascript" src="src/select.js"></script>
 
 </body>
